@@ -157,17 +157,17 @@ body {
     margin: 0 auto;
 }
 
-/* Coverflow Container - 60% width and perfectly centered */
+/* Coverflow Container - enlarged for bigger icons */
 .carousel-container {
-    height: 100px;
-    width: 60%;
+    height: 135px;
+    width: 48.6%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 20px auto 40px auto;
     position: relative;
     overflow: visible;
-    perspective: 600px;
+    perspective: 810px;
     perspective-origin: center center;
 }
 
@@ -181,59 +181,61 @@ body {
     padding: 0 20px;
 }
 
-/* True Coverflow Icons - overlapping and stacked */
+/* Center-Aligned Coverflow Icons */
 .app-icon {
     flex-shrink: 0;
     position: relative;
     cursor: pointer;
     transition: all 0.3s ease;
-    transform-origin: center bottom;
+    transform-origin: center center;
     transform-style: preserve-3d;
-    margin: 0 -25px;
+    margin: 0 -20px;
 }
 
-/* Left side - angled */
+/* Left side - subtle inward tilt */
 .app-icon:nth-child(1) {
-    transform: rotateY(45deg) translateZ(-40px) scale(0.8);
+    transform: rotateY(30deg) translateZ(-40px) scale(0.86);
     opacity: 1;
     z-index: 2;
+    margin: 0 -20px;
 }
 
-/* Left center - slightly angled */
+/* Left center - gentle inward angle */
 .app-icon:nth-child(2) {
-    transform: rotateY(25deg) translateZ(-20px) scale(0.9);
+    transform: rotateY(15deg) translateZ(-20px) scale(1.22);
     opacity: 1;
     z-index: 3;
-    margin: 0 -15px;
+    margin: 0 -20px;
 }
 
 /* Center - prominent and straight */
 .app-icon:nth-child(3) {
-    transform: rotateY(0deg) translateZ(10px) scale(1.1);
+    transform: rotateY(0deg) translateZ(10px) scale(1.49);
     opacity: 1;
     z-index: 10;
-    margin: 0 -5px;
+    margin: 0 -20px;
 }
 
-/* Right center - slightly angled right */
+/* Right center - gentle inward angle */
 .app-icon:nth-child(4) {
-    transform: rotateY(-25deg) translateZ(-20px) scale(0.9);
+    transform: rotateY(-15deg) translateZ(-20px) scale(1.22);
     opacity: 1;
     z-index: 3;
-    margin: 0 -15px;
+    margin: 0 -20px;
 }
 
-/* Right side - angled */
+/* Right side - subtle inward tilt */
 .app-icon:nth-child(5) {
-    transform: rotateY(-45deg) translateZ(-40px) scale(0.8);
+    transform: rotateY(-30deg) translateZ(-40px) scale(0.86);
     opacity: 1;
     z-index: 2;
+    margin: 0 -20px;
 }
 
 
 /* Coverflow hover effects */
 .app-icon:hover {
-    transform: rotateY(0deg) translateZ(25px) scale(1.15) !important;
+    transform: rotateY(0deg) translateZ(25px) scale(1.55) !important;
     opacity: 1 !important;
     z-index: 100 !important;
     margin: 0 0px !important;
