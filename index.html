@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add-ons Panel Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Add-ons Panel -->
+        <div class="addon-panel">
+            <!-- Header -->
+            <div class="panel-header">
+                <h1 class="panel-title">Add-ons</h1>
+                <button class="close-btn" onclick="closePanel()">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M13.5 4.5L4.5 13.5M4.5 4.5L13.5 13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Main Content -->
+            <div class="panel-content">
+                <!-- Title Section -->
+                <div class="title-section">
+                    <h2 class="main-title">Amet tristique<br>sed quis erat</h2>
+                    <p class="subtitle">Lorem ipsum dolor set amet consecteur sed alet cons</p>
+                </div>
+
+                <!-- Carousel Section -->
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <!-- App Icons -->
+                        <div class="app-icon dropbox-icon">
+                            <div class="icon-bg blue-bg">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                    <path d="M7.071 4.929L2.05 8.5L7.071 12.07L12.092 8.5L7.071 4.929ZM16.929 4.929L11.908 8.5L16.929 12.07L21.95 8.5L16.929 4.929ZM2.05 15.5L7.071 19.071L12.092 15.5L7.071 11.929L2.05 15.5ZM16.929 19.071L21.95 15.5L16.929 11.929L11.908 15.5L16.929 19.071Z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        
+                        <div class="app-icon figma-icon">
+                            <div class="icon-bg multi-color">
+                                <div class="figma-shape red"></div>
+                                <div class="figma-shape orange"></div>
+                                <div class="figma-shape purple"></div>
+                                <div class="figma-shape blue"></div>
+                                <div class="figma-shape green"></div>
+                            </div>
+                        </div>
+
+                        <div class="app-icon center-main">
+                            <div class="icon-bg white-bg main-app">
+                                <div class="main-app-content">
+                                    <div class="gradient-bg"></div>
+                                    <div class="app-symbol">A</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="app-icon vimeo-icon">
+                            <div class="icon-bg cyan-bg">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                    <path d="M23 6.5c-.1 2.4-1.8 5.6-5.1 9.6-3.4 4.2-6.3 6.3-8.6 6.3-1.5 0-2.7-1.4-3.7-4.1L3.5 12.8c-.7-2.7-1.5-4.1-2.4-4.1-.2 0-.8.4-1.9 1.1L0 8.5c1.2-1 2.3-2.1 3.4-3.1C4.9 4.2 6.1 3.5 7 3.4c2.1-.2 3.4 1.2 3.9 4.3.5 3.3.9 5.4 1.1 6.2.7 3.1 1.4 4.7 2.2 4.7.6 0 1.5-.9 2.6-2.8 1.1-1.9 1.7-3.3 1.8-4.3.2-1.6-.5-2.4-1.9-2.4-.7 0-1.4.2-2.1.5 1.4-4.6 4.1-6.8 8.1-6.6 3 .1 4.4 2 4.3 5.6z"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="app-icon small-icon-1">
+                            <div class="icon-bg gray-bg">
+                                <div class="small-icon"></div>
+                            </div>
+                        </div>
+
+                        <div class="app-icon small-icon-2">
+                            <div class="icon-bg gray-bg">
+                                <div class="small-icon"></div>
+                            </div>
+                        </div>
+
+                        <div class="app-icon small-icon-3">
+                            <div class="icon-bg gray-bg">
+                                <div class="small-icon"></div>
+                            </div>
+                        </div>
+
+                        <div class="app-icon small-icon-4">
+                            <div class="icon-bg gray-bg">
+                                <div class="small-icon"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <div class="search-bar" onclick="focusSearch()">
+                        <svg class="search-icon" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                            <circle cx="8.25" cy="8.25" r="6.75" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M15.75 15.75L13.0875 13.0875" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <span class="search-text">Explore add-ons</span>
+                    </div>
+                </div>
+
+                <!-- Tags Section -->
+                <div class="tags-container">
+                    <button class="tag" onclick="selectTag(this)">Edit images</button>
+                    <button class="tag" onclick="selectTag(this)">Generate images</button>
+                    <button class="tag" onclick="selectTag(this)">Edit videos</button>
+                    <button class="tag" onclick="selectTag(this)">Access Google Drive</button>
+                    <button class="tag" onclick="selectTag(this)">Generate QR code</button>
+                    <button class="tag" onclick="selectTag(this)">Post on social</button>
+                    <button class="tag" onclick="selectTag(this)">Translate text</button>
+                    <button class="tag" onclick="selectTag(this)">Create GIFs</button>
+                    <button class="tag" onclick="selectTag(this)">Use voiceover</button>
+                    <button class="tag" onclick="selectTag(this)">Sync to Wix</button>
+                </div>
+
+                <!-- Browse Link -->
+                <div class="browse-link">
+                    <a href="#" onclick="browseAddons()">Browse all add-ons</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Variant Label - Outside Panel -->
+        <div class="variant-label">
+            VARIANT 01d-ii
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
